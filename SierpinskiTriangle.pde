@@ -3,28 +3,27 @@ int myX;
 int myY;
 public void setup()
 {
-size(900, 900);
- xlen =302;
- myX = 300;
- myY = 300;
+size(800, 800);
+ xlen = 600;
+ myX = 100;
+ myY = 100;
 }
 
 public void draw()
 {
 sierpinski(myX, myY, xlen);
 }
-public void mouseDragged()//optional
+public void mouseClicked()//optional
 {
-
+xlen/
 }
 public void sierpinski(int x, int y, int len) 
 {
-if (len==200){
+if (len<=15){
 triangle(x,y, x+len, y, x+len/2, y+len);
 } else {
-triangle (x,y, x+len/2, y, x+len/4, y+len/2);
-triangle (x+len/2,y, x+len, y, x+len/4 + len/2, y+len/2);
-triangle (x+len/4,y+len/2, x+len/2+len/4, y+len/2, x+len/2, y+len);
-
+sierpinski(x, y, len/2);
+sierpinski(x+len/2, y, len/2);
+sierpinski(x+len/4, y+len/2, len/2);
 }
 }
