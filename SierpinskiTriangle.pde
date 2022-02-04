@@ -7,15 +7,17 @@ size(800, 800);
  xlen = 600;
  myX = 100;
  myY = 100;
+ 
 }
 
-public void draw()
+ void draw()
 {
 sierpinski(myX, myY, xlen);
+println(xlen);
 }
-public void mouseClicked()//optional
+ void mouseClicked()//optional
 {
-xlen/
+xlen/=2;
 }
 public void sierpinski(int x, int y, int len) 
 {
